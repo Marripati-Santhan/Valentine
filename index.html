@@ -1,129 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Be My Valentine 🤍</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
 
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: linear-gradient(135deg, #fdfbfb, #ebedee);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: "Georgia", serif;
-      color: #333;
-      overflow: hidden;
-    }
+<style>
 
-    .container {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.88);
-      padding: 40px 30px;
-      border-radius: 18px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-      max-width: 340px;
-      width: 90%;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-    h1 {
-      font-weight: normal;
-      margin-bottom: 12px;
-    }
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
 
-    .subtext {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 30px;
-      line-height: 1.6;
-    }
+    background: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("backgroundpic3.jpg");
+        
+    background-size:cover;
+    background-position:center;
+}
 
-    .buttons {
-      position: relative;
-      height: 120px;
-    }
+.container{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:20px;
+    width:90%;
+    max-width:500px;
+    color:white;
+}
 
-    button {
-      padding: 12px 24px;
-      border-radius: 25px;
-      border: none;
-      font-size: 14px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
+h1{
+    font-size:32px;
+    margin-bottom:15px;
+}
 
-    #yesBtn {
-      background-color: #e6b7c6;
-      color: white;
-      margin-right: 10px;
-    }
+.subtext{
+    font-size:18px;
+    margin-bottom:30px;
+    line-height:1.6;
+}
 
-    #yesBtn:hover {
-      background-color: #d99aaa;
-    }
+.buttons{
+    position:relative;
+    height:80px;
+}
 
-    #noBtn {
-      background-color: #ddd;
-      color: #555;
-      position: absolute;
-    }
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s ease;
+    position:absolute;
+}
 
-    .footer {
-      margin-top: 25px;
-      font-size: 12px;
-      color: #888;
-      font-style: italic;
-    }
-  </style>
+/* 💖 BRIGHT YES BUTTON */
+.yes-btn{
+    background:linear-gradient(45deg,#ff4e91,#ff9acb);
+    color:white;
+    left:25%;
+    box-shadow:0 5px 15px rgba(255,78,145,0.6);
+}
+
+.yes-btn:hover{
+    transform:scale(1.1);
+}
+
+/* 😏 NOPE BUTTON */
+.no-btn{
+    background:#ddd;
+    color:#333;
+    left:55%;
+}
+
+.footer{
+    margin-top:30px;
+    font-size:14px;
+    opacity:0.8;
+}
+
+</style>
 </head>
-
 <body>
 
-  <div class="container">
-    <h1>Will you be my Valentine🤌🏻?👀</h1>
+<div class="container">
+    <h1>Will you be my Valentine 🤌🏻?👀</h1>
 
-    <p class="subtext">
-      I didn’t want to ask casually…<br />
-      I wanted it to feel gentle, honest,<br />
-      and a little special 😇
-    </p>
-
-    <div class="buttons">
-      <button id="yesBtn">Yes Johnwick</button>
-      <button id="noBtn">Nope Go Away</button>
+    <div class="subtext">
+        This is not just to impress You... <br>
+        I wanted it to feel gentle, honest,<br>
+        and a little special 😇
     </div>
 
-    <p class="footer">
-      Whatever you choose, you’re important to me.
-    </p>
-  </div>
+    <div class="buttons">
+        <button class="yes-btn" onclick="sayYes()">Yes Johnwick 💫</button>
+        <button class="no-btn" id="noBtn">No Go Away🙅🏻‍♀️</button>
+    </div>
 
-  <script>
-    const noBtn = document.getElementById("noBtn");
-    const yesBtn = document.getElementById("yesBtn");
+    <div class="footer">
+        Whatever you choose, you're important to me.
+    </div>
+</div>
 
-    function moveNope() {
-      const x = Math.random() * (window.innerWidth - 120);
-      const y = Math.random() * (window.innerHeight - 60);
-      noBtn.style.left = x + "px";
-      noBtn.style.top = y + "px";
-    }
+<script>
 
-    // Desktop
-    noBtn.addEventListener("mouseover", moveNope);
+// 💖 YES BUTTON
+function sayYes(){
+    alert("I'm so glad to be with you Sakhi ✨🥰 /n Te Quiero💗🫂🤞🏻");
 
-    // Mobile
-    noBtn.addEventListener("touchstart", moveNope);
+    let phoneNumber = "917337294028"; 
 
-    yesBtn.addEventListener("click", function () {
-      alert(" I'm so glad to be with you Sakhi🥰<br> TE QUIERO💗🫂🤞🏻 ");
+    let message = "She said YES 💖";
+    let whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
 
-      window.location.href =
-        "https://wa.me/917337294028?text=Yes.%20I%20choose%20you%20🤍";
-    });
-  </script>
+    window.location.href = whatsappURL;
+}
+
+
+// 😏 MOVING NOPE BUTTON (does not disappear)
+const noBtn = document.getElementById("noBtn");
+
+function moveButton(){
+    let container = document.querySelector(".buttons");
+
+    let maxX = container.clientWidth - noBtn.offsetWidth;
+    let maxY = container.clientHeight - noBtn.offsetHeight;
+
+    let randomX = Math.random() * maxX;
+    let randomY = Math.random() * maxY;
+
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+}
+
+noBtn.addEventListener("mouseover", moveButton);
+noBtn.addEventListener("click", moveButton);
+
+</script>
 
 </body>
 </html>
